@@ -9,6 +9,7 @@ class ClassSectionController extends Controller
 {
    public function addClassSection(){
         // function to create class sections
+        return view('admin.views.add_section');
    }
 
    public function listClassSection(){

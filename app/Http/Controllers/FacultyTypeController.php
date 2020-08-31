@@ -9,6 +9,7 @@ class FacultyTypeController extends Controller
 {
     public function addFacultyTypes(){
         // function to list faculty types
+        return view("admin.views.add_faculty_type");
 
     }
 

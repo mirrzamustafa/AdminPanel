@@ -9,6 +9,7 @@ class StudentController extends Controller
 {
     public function addStudents(){
         // function to add students 
+        return view("admin.views.add_student");
 
     }
 

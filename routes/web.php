@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-Route::get('/','AdminHomeController@dashboard');
+Route::get('/','AdminHomeController@dashboard')->name('dashboard');
 
 // classes Section routes
 

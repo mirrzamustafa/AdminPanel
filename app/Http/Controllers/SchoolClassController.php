@@ -8,6 +8,7 @@ class SchoolClassController extends Controller
 {
     public function addClass(){
         // function to create classes
+        return view("admin.views.add_class");
 
     }
 
