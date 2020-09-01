@@ -23,8 +23,6 @@
   @section('content')
   @show
 
-  {{-- footer --}} 
-  @include('admin.layouts.footer') 
 
 
 </div>

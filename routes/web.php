@@ -25,5 +25,11 @@ Route::get("/add-faculty-members","FacultyController@addFacultyMembers")->name("
 Route::get("/list-faculty-members","FacultyController@listFacultyMembers")->name("listfacultymembers");
 
 // students routes
-Route::get("/add-students","StudentController@addStudents")->name("addstudents");
+Route::get("/add-students","StudentController@addStudent")->name("addstudent");
 Route::get("/list-students","StudentController@listStudents")->name("liststudents");
+Route::post("/save-students","StudentController@saveStudent")->name("savestudent");
+Route::get("/delete-student","StudentController@deleteStudent")->name("deletestudent");
+Route::get("/show-details","StudentController@showDetails")->name("showstudentdetails");
+Route::get("/edit-student-details","StudentController@editDetails")->name("editstudentdetails");
+Route::post("/update-student-details","StudentController@updateDetails")->name("updatestudent");
+

@@ -6,6 +6,7 @@
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
+ 
       <h1>
         Add Student
       </h1>
@@ -22,9 +23,32 @@
           <div class="box box-primary">
             <div class="box-header with-border">
             </div>
+            @if(session('success'))
+              <div class="col-lg-12">
+                <div class="alert alert-success">
+                  {{session('success')}}
+                </div>
+              </div>
+              <br>
+            @endif
+
+            @if($errors->any())
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="alert alert-danger">
+                      <strong>WHOOPS!</strong> There were some problems with your input.<br/><br/>
+                      <ul>
+                          @foreach($errors->all() as $error)
+                            <li>{{$error}}</li>
+                          @endforeach
+                      </ul>
+                    </div>
+                </div>
+                <br>
+            @endif
             <!-- /.box-header -->
             <!-- form start -->
-            <form role="form" id = "frm-add-class" method = "" action="">
+            <form role="form" id = "frm-add-class" method = "POST" action="{{route('savestudent')}}">
+              @csrf
               <div class="box-body">
               <div class="form-group">
                     <label for="reg_no">Registration #</label>
@@ -68,11 +92,11 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="dd_gender">Choose Gender</label>
-                    <select class = "form-control" name="dd_gender" id="dd_gender">
-                        <option value="1">Male</option>
-                        <option value="2">Female</option>
-                        <option value="3">Other</option>
+                    <label for="student_gender">Choose Gender</label>
+                    <select class = "form-control" name="student_gender" id="student_gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
 
                     </select>
                 </div>
@@ -86,10 +110,10 @@
                     <textarea name="student_address" id="student_address" placeholder = "Enter student address" class = "form-control"></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="dd_status">Status</label>
-                    <select class = "form-control" name="dd_status" id="dd_status">
-                        <option value="1">Active</option>
-                        <option value="0">Inactive</option>
+                    <label for="student_status">Status</label>
+                    <select class = "form-control" name="student_status" id="student_status">
+                        <option value="Active">Active</option>
+                        <option value="Inactive">Inactive</option>
                     </select>
                 </div>
               </div>

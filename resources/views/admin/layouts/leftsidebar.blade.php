@@ -68,7 +68,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li ><a href="{{ route('addstudents')}}"><i class="fa fa-circle-o"></i> Add Students</a></li>
+            <li ><a href="{{ route('addstudent')}}"><i class="fa fa-circle-o"></i> Add Students</a></li>
             <li ><a href="{{ route('liststudents')}}"><i class="fa fa-circle-o"></i> List Students</a></li>
           </ul>
         </li>
