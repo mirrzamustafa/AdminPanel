@@ -14,8 +14,8 @@ class CreateTblClassSections extends Migration {
     public function up() {
         Schema::create('tbl_class_sections', function (Blueprint $table) {
             $table->increments('id');
-            $table->string("section", 10)->nullable();
-            $table->integer("status")->default(1);
+            $table->string("section_name", 10)->nullable();
+            $table->string("status")->default("Active");
             $table->timestamps();
         });
     }

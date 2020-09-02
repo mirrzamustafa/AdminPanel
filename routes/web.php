@@ -7,6 +7,11 @@ Route::get('/','AdminHomeController@dashboard')->name('dashboard');
 
 Route::get("/add-section","ClassSectionController@addClassSection")->name('addclasssection');
 Route::get("/list-section","ClassSectionController@listClassSection")->name('listclasssections');
+Route::post("/save-section","ClassSectionController@saveClassSection")->name("saveclasssection");
+Route::get("/delete-section","ClassSectionController@deleteClassSection")->name("deleteclasssection");
+Route::get("/show-section","ClassSectionController@showClassSection")->name("showclasssection");
+Route::get("/edit-section","ClassSectionController@editClassSection")->name("editclasssection");
+Route::post("/update-section","ClassSectionController@updateClassSection")->name("updateclasssection");
 
 // classes routes
 

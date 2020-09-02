@@ -41,6 +41,7 @@ class FacultyTypeController extends Controller
     }
 
     public function editFacultyTypeDetails(Request $request){
+
         $details = facultytype::where('id',$request->id)->first();
         return view("admin.views.edit_faculty_type_details",compact("details"));
     }

@@ -18,8 +18,8 @@
     <!-- Main content -->
     <section class="content">
         <ul>
-            <li>{{$details->faculty_type}}</li>
-            <li>{{$details->dd_status}}</li>
+            <li> <strong>Type : </strong>{{$details->faculty_type}}</li>
+            <li> <strong>Status : </strong>{{$details->dd_status}}</li>
 
         </ul>
     </section>

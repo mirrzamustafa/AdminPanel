@@ -48,7 +48,7 @@
                 <td>
                     <a href="{{route('showstudentdetails',['id'=>$student->id])}}" class="btn btn-info">Show</a>
                     <a href="{{route('editstudentdetails',['id'=>$student->id])}}" class="btn btn-primary">Edit</a>
-                    <a  type = "submit"  class="btn btn-danger" href="{{route('deletestudent',['id' => $student->id])}}">Delete</a>
+                    <a class="btn btn-danger" href="{{route('deletestudent',['id' => $student->id])}}">Delete</a>
                 </td>
             </tr>
             @endforeach 
