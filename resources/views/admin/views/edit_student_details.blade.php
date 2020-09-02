@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 @endif
-                <form role="form" id = "frm-add-class" method = "POST" action="{{route('updatestudent',['id' => $student->id])}}">
+                <form role="form" id = "frm-add-class" method = "POST" action="{{route('updatestudent',['id' => $student->id])}}"  enctype="multipart/form-data">
                 @csrf
                 <div class="box-body">
                 <div class="form-group">
@@ -78,6 +78,11 @@
                     <div class="form-group">
                     <label for="student_phone_no">Phone #</label>
                     <input type="number" min = "1" class="form-control" id="student_phone_no" name = "student_phone_no" placeholder="Enter student  phone #"  value = "{{$student->student_phone_no}}">
+                    </div>
+
+                    <div class="form-group">
+                    <label for="student_photo">Profile Photo</label>
+                    <input type="file"  class="form-control" id="student_photo" name = "student_photo" ">
                     </div>
 
                     <div class="form-group">

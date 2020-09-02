@@ -15,8 +15,8 @@ class CreateTblFacultyType extends Migration
     {
         Schema::create('tbl_faculty_types', function (Blueprint $table) {
             $table->increments('id'); // id
-            $table->string('type')->nullable();
-            $table->integer('status')->default(1);
+            $table->string('faculty_type')->nullable();
+            $table->string('dd_status');
             $table->timestamps(); // created_at, updated_at
         });
     }

@@ -47,7 +47,7 @@
             @endif
             <!-- /.box-header -->
             <!-- form start -->
-            <form role="form" id = "frm-add-class" method = "POST" action="{{route('savestudent')}}">
+            <form role="form" id = "frm-add-class" method = "POST" action="{{route('savestudent')}}" enctype="multipart/form-data">
               @csrf
               <div class="box-body">
               <div class="form-group">
@@ -103,8 +103,9 @@
 
                 <div class="form-group">
                   <label for="student_photo">Profile Photo</label>
-                  <input type="file" min = "1" class="form-control" id=student_photo" name = "student_photo">
+                  <input type="file" class="form-control" id=student_photo" name = "student_photo">
                 </div>
+
                 <div class="form-group">
                     <label for="student_address">Address</label>
                     <textarea name="student_address" id="student_address" placeholder = "Enter student address" class = "form-control"></textarea>

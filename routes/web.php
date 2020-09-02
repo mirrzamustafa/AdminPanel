@@ -18,6 +18,13 @@ Route::get("/list-class","SchoolClassController@listClass")->name('listclasses')
 
 Route::get("/add-faculty-types","FacultyTypeController@addFacultyTypes")->name("addfacultytypes");
 Route::get("/list-faculty-types","FacultyTypeController@listFacultyTypes")->name("listfacultytypes");
+Route::post("/save-faculty-type", "FacultyTypeController@saveFacultyTypes")->name('savefacultytypes');
+Route::get("/delete-faculty-type", 'FacultyTypeController@deleteFacultyType')->name("deletefacultytype");
+Route::get("/show-faculty-type", 'FacultyTypeController@showFacultyTypeDetails')->name("showfacultytypedetails");
+Route::get("/edit-faculty-type-details", 'FacultyTypeController@editFacultyTypeDetails')->name('editfacultytypedetails');
+Route::post("/update-faculty-type-details", 'FacultyTypeController@updateFacultyTypeDetails')->name('updatefacultytypes');
+
+
 
 // faculty members routes
 

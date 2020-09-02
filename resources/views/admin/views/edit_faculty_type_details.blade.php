@@ -40,12 +40,12 @@
 
         
             <!-- form start -->
-            <form role="form" id = "frm-add-faculty-type" method = "POST" action="{{route('savefacultytypes')}}">
+            <form role="form" id = "frm-add-faculty-type" method = "POST" action="{{route('updatefacultytypes',['id' => $details->id])}}">
                @csrf
               <div class="box-body">
                 <div class="form-group">
                   <label for="section_name">Faculty Type</label>
-                  <input type="text" class="form-control" id="faculty_type" name = "faculty_type" placeholder="Enter Faculty Type">
+                  <input type="text" class="form-control" id="faculty_type" name = "faculty_type" value = "{{$details->faculty_type}}" placeholder="Enter Faculty Type">
                 </div>
                 <div class="form-group">
                     <label for="dd_status">Status</label>

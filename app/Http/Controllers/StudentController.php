@@ -29,8 +29,30 @@ class StudentController extends Controller
             'student_status' => 'required',
 
         ]);
-        student::create($request->all());
-        return redirect()->route('addstudent')->with('success','Student is added successfully');
+        
+        $student = new student();
+        if($request->hasfile('student_photo')){
+            $picture = $request->file('student_photo');
+            $extention = $picture->getClientOriginalExtension();
+            $picturename = time() . '.' . $extention ;
+            $picture->move('uploads/profile_pictures',$picturename);
+            $student->student_photo = $picturename;
+        }else{
+            return request;
+        }
+        $student->reg_no = $request->reg_no;
+        $student->student_name = $request->student_name;
+        $student->student_father_name = $request->student_father_name;
+        $student->student_mother_name = $request->student_mother_name;
+        $student->student_age = $request->student_age;
+        $student->student_roll_no = $request->student_roll_no;
+        $student->student_email = $request->student_email;
+        $student->student_phone_no = $request->student_phone_no;
+        $student->student_gender = $request->student_gender;
+        $student->student_address = $request->student_address;
+        $student->student_status = $request->student_status;
+        $student->save();        
+        return redirect()->route('liststudents')->with('success','Student is added successfully');
     }
 
     public function listStudents(){
@@ -66,11 +88,21 @@ class StudentController extends Controller
             'student_email' => 'required',
             'student_phone_no' => 'required',
             'student_gender' => 'required',
+            'student_photo' => 'required',
             'student_address' => 'required',
             'student_status' => 'required',
 
         ]);
         $student = student::find($request->id);
+        if($request->hasfile('student_photo')){
+            $picture = $request->file('student_photo');
+            $extention = $picture->getClientOriginalExtension();
+            $picturename = time() . '.' . $extention ;
+            $picture->move('uploads/profile_pictures',$picturename);
+            $student->student_photo = $picturename;
+        }else{
+            return request;
+        }
         $student->reg_no = $request->reg_no;
         $student->student_name = $request->student_name;
         $student->student_father_name = $request->student_father_name;

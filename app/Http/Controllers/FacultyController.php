@@ -14,6 +14,5 @@ class FacultyController extends Controller
 
     public function listFacultyMembers(){
         // function to list faculty
-
     }
 }
