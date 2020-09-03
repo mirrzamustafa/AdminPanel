@@ -10,8 +10,7 @@
       </h1>
       <ol class="breadcrumb">
       <li><a href="{{route('dashboard')}}"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="{{route('liststudents')}}"><i class="fa fa-dashboard"></i>List Students</a></li>
-
+        <li><a href="{{route('liststudents')}}">List Students</a></li>
         <li class="active">Edit Student Details</li>
       </ol>
     </section>

@@ -7,11 +7,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Add Faculty Type
+        Edit Faculty Type
       </h1>
       <ol class="breadcrumb">
-        <li><a href="{{route('dashboard')}}"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Add Faculty Type</li>
+        <li><a href="{{route('dashboard')}}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+        <li><a href="{{route('listfacultytypes')}}"> List Faculty Types</a></li>
+        <li class="active">Edit Faculty Type</li>
       </ol>
     </section>
 

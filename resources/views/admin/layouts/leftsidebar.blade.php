@@ -37,7 +37,7 @@
           </a>
           <ul class="treeview-menu">
             <li ><a href="{{ route('addclasssection')  }}"><i class="fa fa-circle-o"></i> Add Section</a></li>
-            <li ><a href="{{ route('listclasssections') }}"><i class="fa fa-circle-o"></i> List Section</a></li>
+            <li ><a href="{{ route('listclasssections') }}"><i class="fa fa-circle-o"></i> List Sections</a></li>
             <li ><a href="{{ route('addclasses') }}"><i class="fa fa-circle-o"></i> Add Class</a></li>
             <li ><a href="{{ route('listclasses') }}"><i class="fa fa-circle-o"></i> List Classes</a></li>
           </ul>
@@ -53,9 +53,9 @@
           </a>
           <ul class="treeview-menu">
             <li ><a href="{{ route('addfacultytypes')}}"><i class="fa fa-circle-o"></i> Add Faculty Type</a></li>
-            <li ><a href="{{ route('listfacultytypes')}}"><i class="fa fa-circle-o"></i> List Faculty Type</a></li>
+            <li ><a href="{{ route('listfacultytypes')}}"><i class="fa fa-circle-o"></i> List Faculty Types</a></li>
             <li ><a href="{{ route('addfacultymembers')}}"><i class="fa fa-circle-o"></i> Add Faculty</a></li>
-            <li ><a href="{{ route('listfacultymembers')}}"><i class="fa fa-circle-o"></i> List Faculty</a></li>
+            <li ><a href="{{ route('listfacultymembers')}}"><i class="fa fa-circle-o"></i> List Faculty  </a></li>
           </ul>
         </li>
 
@@ -68,7 +68,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li ><a href="{{ route('addstudent')}}"><i class="fa fa-circle-o"></i> Add Students</a></li>
+            <li ><a href="{{ route('addstudent')}}"><i class="fa fa-circle-o"></i> Add Student</a></li>
             <li ><a href="{{ route('liststudents')}}"><i class="fa fa-circle-o"></i> List Students</a></li>
           </ul>
         </li>

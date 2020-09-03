@@ -10,7 +10,7 @@
       </h1>
       <ol class="breadcrumb">
         <li><a href="{{route('dashboard')}}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li href="{{route('listfacultytypes')}}">List Faculty Types</li>
+        <li><a href="{{route('listfacultytypes')}}"> List Faculty Types</a></li>
         <li class="active">Faculty Type Details</li>
       </ol>
     </section>
