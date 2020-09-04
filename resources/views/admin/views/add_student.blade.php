@@ -52,43 +52,43 @@
               <div class="box-body">
               <div class="form-group">
                     <label for="reg_no">Registration #</label>
-                    <input type="number" class="form-control" id="reg_no" name = "reg_no" placeholder="Enter Registration #">
+                    <input type="number" class="form-control" id="reg_no" value = "{{old('reg_no')}}" name = "reg_no" placeholder="Enter Registration #">
               </div>
 
 
                 <div class="form-group">
                   <label for="student_name">Name</label>
-                  <input type="text" class="form-control" id="student_name" name = "student_name" placeholder="Enter student name">
+                  <input type="text" class="form-control" id="student_name" name = "student_name" value = "{{old('student_name')}}" placeholder="Enter student name">
                 </div>
                 
                 <div class="form-group">
                   <label for="student_father_name">Father Name</label>
-                  <input type="text" class="form-control" id="student_father_name" name = "student_father_name" placeholder="Enter Father's name">
+                  <input type="text" class="form-control" id="student_father_name" name = "student_father_name" value = "{{old('student_father_name')}}" placeholder="Enter Father's name">
                 </div>
                 
                 <div class="form-group">
                   <label for="student_mother_name">Mother Name</label>
-                  <input type="text" class="form-control" id="student_mother_name" name = "student_mother_name" placeholder="Enter Mother's name">
+                  <input type="text" class="form-control" id="student_mother_name" name = "student_mother_name" value = "{{old('student_mother_name')}}" placeholder="Enter Mother's name">
                 </div>
 
                 <div class="form-group">
                   <label for="student_age">Student Age</label>
-                  <input type="number" min = "1" class="form-control" id="student_age" name = "student_age" placeholder="Enter student age">
+                  <input type="number" min = "1" class="form-control" id="student_age" name = "student_age" value = "{{old('student_age')}}" placeholder="Enter student age">
                 </div>
 
                 <div class="form-group">
                   <label for="student_roll_no">Roll #</label>
-                  <input type="number" min = "1" class="form-control" id="student_roll_no" name = "student_roll_no" placeholder="Enter student roll #">
+                  <input type="number" min = "1" class="form-control" id="student_roll_no" name = "student_roll_no" value = "{{old('student_roll_no')}}" placeholder="Enter student roll #">
                 </div>
  
                 <div class="form-group">
                   <label for="student_email">Email</label>
-                  <input type="email" min = "1" class="form-control" id="student_email" name = "student_email" placeholder="Enter student email">
+                  <input type="email" min = "1" class="form-control" id="student_email" name = "student_email" value = "{{old('student_email')}}" placeholder="Enter student email">
                 </div>
 
                 <div class="form-group">
                   <label for="student_phone_no">Phone #</label>
-                  <input type="number" min = "1" class="form-control" id="student_phone_no" name = "student_phone_no" placeholder="Enter student  phone #">
+                  <input type="number" min = "1" class="form-control" id="student_phone_no" name = "student_phone_no" value = "{{old('student_phone_no')}}" placeholder="Enter student  phone #">
                 </div>
 
                 <div class="form-group">
@@ -103,12 +103,12 @@
 
                 <div class="form-group">
                   <label for="student_photo">Profile Photo</label>
-                  <input type="file" class="form-control" id=student_photo" name = "student_photo">
+                  <input type="file" class="form-control" id=student_photo" name = "student_photo" value = "{{old('student_photo')}}" >
                 </div>
 
                 <div class="form-group">
                     <label for="student_address">Address</label>
-                    <textarea name="student_address" id="student_address" placeholder = "Enter student address" class = "form-control"></textarea>
+                    <textarea name="student_address" id="student_address" placeholder = "Enter student address" class = "form-control">{{old('student_address')}}</textarea>
                 </div>
                 <div class="form-group">
                     <label for="student_status">Status</label>

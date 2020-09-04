@@ -11,7 +11,8 @@
       </h1>
       <ol class="breadcrumb">
         <li><a href="{{route('dashboard')}}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li class="active">Add Class</li>
+        <li><a href="{{route('listclasses')}}"> List Classes</a></li>
+        <li class="active">Edit Class</li>
       </ol>
     </section>
 
@@ -38,32 +39,31 @@
                     </div>
                   </div>
             @endif
-            <form role="form" id = "frm-add-class" method = "POST" action="{{route('saveclasses')}}">
+            <form role="form" id = "frm-add-class" method = "POST" action="{{route('updateclass', ['id' => $class->id])}}">
              @csrf
               <div class="box-body">
                 <div class="form-group">
                   <label for="class_name">Class name</label>
-                  <input type="text" class="form-control" id="class_name" name = "class_name" value = "{{ old('class_name') }}" placeholder="Enter class name">
+                  <input type="text" class="form-control" id="class_name" name = "class_name" value = "{{$class->class_name}}" placeholder="Enter class name">
                 </div>
                 
                 <div class="form-group">
                     <label for="dd_section">Choose Section</label>
-                    <select class = "form-control" name="section" id="dd_section" >
+                    <select class = "form-control" name="dd_section" id="dd_section">
                         <option value="A">A</option>
                         <option value="B">B</option>
                         <option value="C">C</option>
-
                     </select>
                 </div>
 
                 <div class="form-group">
                   <label for="seats_available">Seats Available</label>
-                  <input type="number" min = "1" class="form-control" id="seats_available" value = "{{ old('seats_available') }}" name = "seats_available" placeholder="Enter seats">
+                  <input type="number" min = "1" class="form-control" id="seats_available"  value = "{{$class->seats_available}}" name = "seats_available" placeholder="Enter seats">
                 </div>
 
                 <div class="form-group">
                     <label for="dd_status">Status</label>
-                    <select class = "form-control" name="status" id="status">
+                    <select class = "form-control" name="dd_status" id="dd_status">
                         <option value="Active">Active</option>
                         <option value="Inactive">Inactive</option>
                     </select>

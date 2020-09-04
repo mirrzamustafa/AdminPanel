@@ -18,6 +18,11 @@ Route::post("/update-section","ClassSectionController@updateClassSection")->name
 
 Route::get("/add-class","SchoolClassController@addClass")->name('addclasses');
 Route::get("/list-class","SchoolClassController@listClass")->name('listclasses');
+Route::post("/save-class","SchoolClassController@saveClass")->name('saveclasses');
+Route::get("/delete-class","SchoolClassController@deleteClass")->name('deleteclass');
+Route::get("/show-class","SchoolClassController@showClass")->name('showclass');
+Route::post("/update-class","SchoolClassController@updateClass")->name('updateclass');
+Route::get("/edit-class","SchoolClassController@editClass")->name('editclass');
 
 // faculty type routes
 

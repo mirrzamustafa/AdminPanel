@@ -52,7 +52,7 @@
             <div class="box-body">
                 <div class="form-group">
                   <label for="section_name">Section name</label>
-                  <input type="text" class="form-control" id="section_name" name = "section_name" placeholder="Enter section name">
+                  <input type="text" class="form-control" id="section_name" value = "{{old('section_name')}}" name = "section_name" placeholder="Enter section name">
                 </div>
                 <div class="form-group">
                     <label for="dd_status">Status</label>
