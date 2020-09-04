@@ -10,7 +10,7 @@
         Add Faculty Member
       </h1>
       <ol class="breadcrumb">
-        <li><a href="{{route('dashboard')}}"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="{{route('dashboard')}}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
         <li class="active">Add Faculty Member</li>
       </ol>
     </section>
@@ -42,10 +42,10 @@
               <div class="form-group">
                     <label for="dd_type">Choose Type</label>
                     <select class = "form-control" name="dd_type" id="dd_type">
-                        <option value="1">Teaching</option>
-                        <option value="2">Non Teaching</option>
-                        <option value="3">Labs Faculty</option>
-
+                       
+                        @foreach($faculty_type as $type)
+                           <option value="{{$type->faculty_type}}">{{$type->faculty_type}}</option>
+                        @endforeach
                     </select>
                 </div>
 

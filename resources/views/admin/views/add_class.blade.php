@@ -38,6 +38,7 @@
                     </div>
                   </div>
             @endif
+
             <form role="form" id = "frm-add-class" method = "POST" action="{{route('saveclasses')}}">
              @csrf
               <div class="box-body">
@@ -49,10 +50,9 @@
                 <div class="form-group">
                     <label for="dd_section">Choose Section</label>
                     <select class = "form-control" name="section" id="dd_section" >
-                        <option value="A">A</option>
-                        <option value="B">B</option>
-                        <option value="C">C</option>
-
+                        @foreach($sections as $section)
+                           <option value = "{{$section->section_name}}" > {{ $section->section_name }} </option>
+                        @endforeach
                     </select>
                 </div>
 

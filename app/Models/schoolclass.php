@@ -9,7 +9,7 @@ class schoolclass extends Model
     protected $table = "tbl_classes";
     protected $fillable = [
         'class_name',
-        'class_section_id',
+        'class_section',
         'seats_available',
         'status'
     ];

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\classsection;
 use App\Models\schoolclass;
 use Illuminate\Http\Request;
 
@@ -10,8 +11,8 @@ class SchoolClassController extends Controller
 
     public function addClass(){
         // function to create classes
-        return view("admin.views.add_class");
-
+        $sections = classsection::select("section_name")->get();
+        return view("admin.views.add_class")->with(compact("sections"));
     }
 
     public function saveClass(Request $request){
@@ -21,7 +22,7 @@ class SchoolClassController extends Controller
         $request->validate([
             'class_name' => 'required | unique:tbl_classes',
             'section' => 'required',
-            'seats_available' => 'required',
+            'seats_available' => 'required ',
             'status' => 'required',
         ]);
         //if you want to use this method you jhave to use the same input field as use in database columns 
