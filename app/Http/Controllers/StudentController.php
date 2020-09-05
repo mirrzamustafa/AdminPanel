@@ -38,7 +38,7 @@ class StudentController extends Controller
             $picture->move('uploads/profile_pictures',$picturename);
             $student->student_photo = $picturename;
         }else{
-            return request;
+            return $request;
         }
         $student->reg_no = $request->reg_no;
         $student->student_name = $request->student_name;

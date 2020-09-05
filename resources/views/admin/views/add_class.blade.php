@@ -50,9 +50,13 @@
                 <div class="form-group">
                     <label for="dd_section">Choose Section</label>
                     <select class = "form-control" name="section" id="dd_section" >
+                    @if(sizeOf($sections) == 0)
+                    <option value="">Enlist sections first</option>
+                    @else
                         @foreach($sections as $section)
                            <option value = "{{$section->section_name}}" > {{ $section->section_name }} </option>
                         @endforeach
+                    @endif
                     </select>
                 </div>
 

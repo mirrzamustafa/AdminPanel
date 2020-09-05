@@ -40,6 +40,11 @@ Route::post("/update-faculty-type-details", 'FacultyTypeController@updateFaculty
 
 Route::get("/add-faculty-members","FacultyController@addFacultyMembers")->name("addfacultymembers");
 Route::get("/list-faculty-members","FacultyController@listFacultyMembers")->name("listfacultymembers");
+Route::post("/save-faculty-members","FacultyController@saveFacultyMembers")->name("savefacultymembers");
+Route::get("/delete-faculty-members","FacultyController@deleteFacultyMembers")->name("deletefacultymember");
+Route::get("/show-faculty-member","FacultyController@showFacultyMember")->name("showfacultymember");
+Route::get("/edit-faculty-member", 'FacultyController@editFacultyMember')->name('editfacultymember');
+Route::post("/update-faculty-member", 'FacultyController@updateFacultyMember')->name('updatefacultymember');
 
 // students routes
 Route::get("/add-students","StudentController@addStudent")->name("addstudent");

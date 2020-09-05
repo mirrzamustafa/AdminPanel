@@ -15,15 +15,14 @@ class CreateTblFaculties extends Migration
     {
         Schema::create('tbl_faculties', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer("faculty_type_id")->nullable();
+            $table->string("faculty_type");
             $table->string("name",255)->nullable();
-            $table->string("email",255)->unique();
-            $table->text("designation")->nullable();
+            $table->string("email",255)->nullable();
             $table->string("phone_no",50)->nullable();
-            $table->integer("gender_id")->nullable();
+            $table->string("gender")->nullable();
             $table->string("profile_photo",300)->nullable();
             $table->text("address")->nullable();
-            $table->integer("status")->default(1);
+            $table->string("status")->default("Active");
             $table->timestamps();
         });
     }

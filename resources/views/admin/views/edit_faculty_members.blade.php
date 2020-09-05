@@ -7,11 +7,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Add Faculty Member
+        Edit Faculty Member
       </h1>
       <ol class="breadcrumb">
         <li><a href="{{route('dashboard')}}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li class="active">Add Faculty Member</li>
+        <li class="active">Edit Faculty Member</li>
       </ol>
     </section>
 
@@ -37,7 +37,7 @@
                 <br>
             @endif
 
-            <form role="form" id = "frm-add-class"  action="{{route('savefacultymembers')}}"  method="post" enctype="multipart/form-data">
+            <form role="form" id = "frm-add-class"  action="{{route('updatefacultymember',['id' => $details->id])}}"  method="post" enctype="multipart/form-data">
               @csrf
               <div class="box-body">
               <div class="form-group">
@@ -56,20 +56,20 @@
 
                 <div class="form-group">
                   <label for="name">Name</label>
-                  <input type="text" class="form-control" id="faculty_mem_name" name = "name" value = "{{old('name')}}" placeholder="Enter full name">
+                  <input type="text" class="form-control" id="faculty_mem_name" name = "name" value = "{{$details->name}}" placeholder="Enter full name">
                 </div>
                 
              
 
                 <div class="form-group">
                   <label for="email">Email</label>
-                  <input type="email" min = "1" class="form-control" id="faculty_email" name = "email" value = "{{old('email')}}" placeholder="Enter email">
+                  <input type="email" min = "1" class="form-control" id="faculty_email" name = "email"value = "{{$details->email}}" placeholder="Enter email">
                 </div>
 
                
                 <div class="form-group">
                   <label for="faculty_mem_phone_no">Phone #</label>
-                  <input type="number" min = "1" class="form-control" id="faculty_mem_phone_no" name = "faculty_mem_phone_no" value = "{{old('faculty_mem_phone_no')}}" placeholder="Enter phone #">
+                  <input type="number" min = "1" class="form-control" id="faculty_mem_phone_no" name = "faculty_mem_phone_no" value = "{{$details->phone_no}}" placeholder="Enter phone #">
                 </div>
 
                 <div class="form-group">
@@ -89,7 +89,7 @@
 
                 <div class="form-group">
                     <label for="faculty_mem_address">Address</label>
-                    <textarea name="faculty_mem_address" id="faculty_mem_address" placeholder = "Enter address" class = "form-control">{{old('faculty_mem_address')}}</textarea>
+                    <textarea name="faculty_mem_address" id="faculty_mem_address" placeholder = "Enter address" class = "form-control">{{$details->address}}</textarea>
                 </div>
                 <div class="form-group">
                     <label for="dd_status">Status</label>

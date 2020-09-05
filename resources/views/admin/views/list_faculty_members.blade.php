@@ -6,11 +6,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        List Faculty Types
+        List Faculty Members
       </h1>
       <ol class="breadcrumb">
         <li><a href="{{route('dashboard')}}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li class="active">List Faculty Types</li>
+        <li class="active">List Faculty Members</li>
       </ol>
     </section>
   
@@ -29,18 +29,22 @@
         <table class="table table-bordered">
                 <tr>
                     <th>Name</th>
+                    <th>Email</th>
+                    <th>Gender</th>
                     <th>Status</th>
                     <th>Action</th>
                 </tr>
 
-            @foreach($facultytypes as $type)
+            @foreach($faculty as $member)
                 <tr>
-                    <td>{{$type->faculty_type}}</td>
-                    <td>{{$type->dd_status}}</td>
+                    <td>{{$member->name}}</td>
+                    <td>{{$member->email}}</td>
+                    <td>{{$member->gender}}</td>
+                    <td>{{$member->status}}</td>
                     <td>
-                      <a class = "btn btn-info"  href="{{route('showfacultytypedetails',['id' => $type->id])}}">Show</a>
-                       <a class = "btn btn-primary"  href="{{route('editfacultytypedetails',['id' => $type->id])}}">Edit</a>
-                        <a class = "btn btn-danger"  href="{{route('deletefacultytype', ['id' => $type->id])}}">Delete</a>
+                      <a href = "{{route('showfacultymember',['id' => $member->id])}}"class = "btn btn-info" >Show</a>
+                       <a href = "{{route( 'editfacultymember' , ['id' => $member->id] )}}" class = "btn btn-primary" >Edit</a>
+                        <a href = "{{route('deletefacultymember',['id' => $member->id])}}" class = "btn btn-danger"  >Delete</a>
                     </td>
                 </tr>
             @endforeach
