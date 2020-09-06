@@ -3,6 +3,11 @@
 use Illuminate\Support\Facades\Route;
 Route::get('/','AdminHomeController@dashboard')->name('dashboard');
 
+
+// Admin control 
+Route::get("/login", "AdminController@adminLoginForm")->name("login");
+Route::get("/register","AdminController@adminRegisterForm")->name("register");
+
 // classes Section routes
 
 Route::get("/add-section","ClassSectionController@addClassSection")->name('addclasssection');
